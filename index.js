@@ -1,7 +1,7 @@
-function pathSum(root, sum) {
-  if (!root) return false;
-  if (!root.left && !root.right && root.val === sum) return true;
-  return (
-    pathSum(root.left, sum - root.val) || pathSum(root.right, sum - root.val)
-  );
-}
+// Alice should have the initial balance minus tranfer amount
+if (aliceBalanceAfter[0].amount !== ALICE_INITIAL_BALANCE - TRANSFER_AMOUNT)
+  throw new Error("Alice's balance after transfer is incorrect");
+
+// Sponsor should have the initial balance minus gas
+if (sponsorBalanceAfter[0].amount >= SPONSOR_INITIAL_BALANCE)
+  throw new Error("Sponsor's balance after transfer is incorrect");
